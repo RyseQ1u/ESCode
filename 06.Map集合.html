@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建Map集合
+        //let person = new Map()//创建一个空的Map集合
+        let person = new Map([
+            ["name","boy"],
+            ["gender","gg"],
+            ["age",17],
+        ]);
+        //set 向Map集合中添加新元素
+        person.set("height",188);
+        person.set("age",18);
+        console.log("person:",person);
+        // delete 删除元素
+        person.delete("gender");
+        console.log("person:",person);
+        //has 检查Map集合中是否包含指定元素
+        console.log("person.has('age'):",person.has("age"));
+        console.log("person.has('gender'):",person.has("gender"));
+        //size 获取Map集合的大小
+        console.log("person.size:",person.size);
+        //from 将Map集合转换为数组
+        let arr =Array.from(person);
+        console.log("arr:",arr);
+        //使用扩展运算符 将Map集合 转换为 数组
+        let arr2 =[...person];
+        console.log("arr2:",arr2);
+        //for..of 循环遍历Map集合
+        for (const [k,v] of person) {
+            console.log("for:",k,":",v);
+        }
+        //foreach
+        person.forEach((k,v) => {
+            console.log("foreach:",k,":",v);
+        });
+        //clear 清空
+        person.clear();
+        console.log("person.size:",person.size);
+    </script>
+</body>
+</html>

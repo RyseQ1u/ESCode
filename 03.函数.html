@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数
+        function GetStr(){
+            return "Hello World";
+        }
+        console.log(GetStr());
+        //参数
+        function add(number){
+            return number+10;
+        }
+        console.log("add(40):",add(40));
+        //默认值
+        function getPage(page = 1){
+            return page;
+        }
+        console.log("getPage():",getPage());
+        console.log("getPage(10):",getPage(10));
+        //匿名函数
+        /*
+        匿名函数 [匿名函数没有显式的名称, 被视为一个函数表达式]
+        匿名函数可以在不需要额外命名的情况下进行定义和使用, 通常被用作回调函数, 即将函数作为参数传递给其他函数
+
+        回调函数是一种在特定事件或条件发生时被调用的函数, 回调函数通常用于异步编程中,
+        比如 success 是 ajax 中的一个回调函数, 用于处理请求成功的结果
+        */
+        let sub = function(x,y){
+            return x-y;
+        }
+        console.log("sub(30,5):",sub(30,5));
+        //箭头函数 匿名函数的一种
+        let plus = (a,b) => {
+            return a+b;
+        }
+        console.log("plus(5,10):",plus(5,10));
+        //隐式返回 函数体只有一个表达式时可以省略{}和return
+        let plus2 = (a,b)=>a+b;
+        console.log("plus2(5,10):",plus2(5,10));
+    </script>
+</body>
+</html>
