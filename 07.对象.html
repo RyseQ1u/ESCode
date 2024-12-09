@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //声明对象
+        let p = {
+            name:'boy',
+            gender:'gg',
+            age:'18',
+        }
+        //向对象中添加新数学
+        p.height=188;
+        //对象中键是唯一的，使用相同键再次赋值时，会替换原来键对应的值
+        p.age=28;
+        console.log("p:",p);
+        //delete 删除属性
+        delete p.gender;
+        console.log("p:",p);
+        //has 检查对象是否包含指定属性
+        let has = 'gender' in p;
+        console.log("has:",has);
+        //keys 获取对象属性数量
+        console.log("keys:",Object.keys(p));
+        console.log("length:",Object.keys(p).length);
+        //entries 将对象转换为数组
+        let arr = Object.entries(p);
+        console.log("arr:",arr);
+        //for...in 用于遍历对象的可枚举类型
+        for (const key in p) {
+            console.log("for...in:",key,":",p[key]);
+        }
+        //foreach 遍历对象的属性和值
+        Object.entries(p).forEach(([k,v]) => {
+            console.log("forEach:",k,":",v);
+        }); 
+        //清空对象
+        p={};
+        console.log("p:",p);
+        console.log("length:",Object.keys(p).length);
+    </script>
+</body>
+</html>
