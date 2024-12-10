@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            name
+            gender
+            constructor(name,gender){
+                this.name=name
+                this.gender=gender
+            }
+            sleep(){
+                return `${this.name} 歇了...`
+            }
+        }
+        class Student extends Person{
+            age
+            constructor(name,gender ,age){
+                super(name,gender)
+                this.age=age
+            }
+            do(){
+                return `${this.name} 在读书...`
+            }
+        }
+        let s = new Student('school_boy','gg',16)
+        console.log('student:',s);
+        console.log('age:',s.age);
+        console.log('do:',s.do());
+        console.log('gender:',s.gender);
+        console.log('sleep:',s.sleep());
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            class Person{
+            name;
+            //# 私有属性
+            #age;
+            constructor(name,age){
+                this.name=name
+                this.#age=age
+            }
+            get age(){
+                return this.#age
+            }
+            set age(v){
+                this.#age=v
+            }
+            info(){
+                //return "name:"+this.name+" age:"+this.age
+                //模板字符串
+                return `name:${this.name} age:${this.age}`
+            }
+            }
+            let p = new Person("gg", 19)
+            console.log("person", p)
+            p.age=20
+            console.log("age", p.age)
+            console.log( p.info())
+    </script>
+</body>
+</html>

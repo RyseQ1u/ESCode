@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            //若在类中没有显式声明属性，但在构造函数或方法中引用未声明的属性，会自动视为实例属性
+            //姓名
+            name;
+            age;
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+            info(){
+                return "name:"+this.name+" age:"+this.age
+                //模板字符串
+                return `name:${this.name} age:${this.age}`
+            }
+        }
+        let p = new Person('boy',18)
+        console.log('person',p);
+        console.log('age',p.age);
+        console.log( p.info())
+        p.gender = 'gg'
+        console.log('person',p);
+    </script>
+</body>
+</html>
