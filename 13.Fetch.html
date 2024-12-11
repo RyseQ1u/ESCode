@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //出现跨域问题...
+        //get请求
+        fetch('http://127.0.0.1:5141/api/Books/Book',{
+        })
+        .then(response=>{
+
+            //返回的解析后的json数据会传递给下一个 then() 方法中的回调函数作为参数,这个参数就是 data
+            return response.json()
+        }).then (data=>{
+            console.log('get.data:',data);
+            
+        }).catch(error=>{
+            console.log('get.error:',error);
+            
+        }).finally(()=>{
+            console.log('get.finally');
+            
+        })
+    </script>
+</body>
+</html>
