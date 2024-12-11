@@ -8,6 +8,36 @@
 <body>
     <script>
         //解构从数据或对象中提取值并赋值给变量
+        let [x,y] = [1,2]
+        console.log(`x: ${x} , y: ${y}`);
+        let [,,c]=[10,20,30]
+        console.log(`c: ${c}`);
+        //扩展运算符
+        let[a,...b]=[1,2,3,4,5,6,7,8,9]
+        console.log(`a: ${a} , b: ${b}`);
+        //默认值
+        let [x2,y2=100]=[100]
+        console.log(`x2: ${x2} , y2: ${y2}`);
+        //两数交换
+        let x3 = 10;
+        let y3 = 100;
+        [x3,y3]=[y3,x3]
+        console.log(`x3: ${x3} , y3: ${y3}`);
+        //对象解构
+        let person={
+            name :'boy',
+            gender :'gg',
+            age:19,
+        }
+        let {name}=person
+        console.log(`name: ${name}`);
+        //重命名
+        let {name:userName,gender,age}=person
+        console.log(`userName: ${userName},gender: ${gender},age: ${age}`);
+        console.log("p: ",person);
+        //默认值
+        let{address='China'}=person
+        console.log(`address:${address}`);
     </script>
 </body>
 </html>
