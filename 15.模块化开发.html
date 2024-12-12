@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        // import{name,gender,getAge} from './js/model.js'
+        //使用as 修改别名
+        // import{name as boyName,gender,getAge} from './js/model.js'
+        //使用 default 导出成对象
+        //import obj from './js/model.js'
+        //* as 获取成对象
+        import * as obj from './js/model.js'
+        console.log(obj.name);
+        console.log(obj.gender);
+        console.log(obj.getAge());
+    </script>
+</body>
+</html>
